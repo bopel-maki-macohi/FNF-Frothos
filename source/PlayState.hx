@@ -482,6 +482,24 @@ class PlayState extends MusicBeatState
 				add(waveSpriteFG);
 			 */
 		}
+		else if (['ugh', 'guns', 'stress'].contains(SONG.song.toLowerCase()))
+		{
+			defaultCamZoom = 0.9;
+			curStage = 'tank';
+
+			var sky:FlxSprite = new FlxSprite(0,0).loadGraphic('assets/images/tank/tankSky.png');
+			sky.scrollFactor.set(0, 0);
+			sky.active = false;
+			sky.scale.set(FlxG.width * 1.5, FlxG.height * 1.5);
+			sky.screenCenter();
+			add(sky);
+
+			var buildins:FlxSprite = new FlxSprite(0,0).loadGraphic('assets/images/tank/tankBuildings.png');
+			buildins.scrollFactor.set(0, 0);
+			buildins.active = false;
+			buildins.screenCenter();
+			add(buildins);
+		}
 		else
 		{
 			defaultCamZoom = 0.9;

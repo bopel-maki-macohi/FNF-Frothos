@@ -54,7 +54,7 @@ class TitleState extends MusicBeatState
 
 		super.create();
 
-		FlxG.save.bind('funkin', 'ninjamuffin99');
+		FlxG.save.bind('frothos', 'maki');
 
 		Highscore.load();
 
@@ -71,6 +71,8 @@ class TitleState extends MusicBeatState
 			if (!StoryMenuState.weekUnlocked[0])
 				StoryMenuState.weekUnlocked[0] = true;
 		}
+
+		FlxSprite.defaultAntialiasing = true;
 
 		#if FREEPLAY
 		FlxG.switchState(new FreeplayState());
