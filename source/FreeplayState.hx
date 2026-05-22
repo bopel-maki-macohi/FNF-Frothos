@@ -81,6 +81,13 @@ class FreeplayState extends MusicBeatState
 			// songs.push('Winter-Horrorland');
 		}
 
+		if (StoryMenuState.weekUnlocked[7] || isDebug)
+		{
+			songs.push('Ugh');
+			// songs.push('Guns');
+			// songs.push('Stress');
+		}
+
 		// LOAD MUSIC
 
 		// LOAD CHARACTERS
